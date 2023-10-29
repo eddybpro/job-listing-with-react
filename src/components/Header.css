@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(180, 14%, 20%);
+  --color-brand-2: hsl(180, 8%, 52%);
+  --color-brand-3: hsl(180, 31%, 95%);
+
+  --color-site-1: hsl(180, 52%, 96%);
+  --color-site-2: hsl(180, 29%, 50%);
+  --color-site-3: hsl(180, 13%, 86%);
+
+  --font-league-spartan: "League Spartan", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-league-spartan);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+.HeaderBox {
+  background-color: var(--color-brand-3);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0 2rem;
+  transform: translateY(-4rem);
+  box-shadow: 0px 3px 15px var(--color-brand-2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.HeaderBox-List {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.HeaderBox-List-Key {
+  background-color: var(--color-site-3);
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  color: var(--color-site-2);
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.HeaderBox-List-RemoveBtn {
+  background-color: var(--color-site-2);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.555rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderBox-List-RemoveBtn:hover {
+  background-color: var(--color-brand-1);
+}
+
+.HeaderBox-List-RemoveBtn > img {
+  width: 1.15rem;
+}
+
+.HeaderBox-ClearBtn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--color-brand-2);
+  font-size: 1.6rem;
+  text-transform: capitalize;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.HeaderBox-ClearBtn:hover {
+  color: var(--color-site-2);
+  text-decoration: underline;
+}

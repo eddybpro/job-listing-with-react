@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(180, 14%, 20%);
+  --color-brand-2: hsl(180, 8%, 52%);
+  --color-brand-3: hsl(180, 31%, 95%);
+
+  --color-site-1: hsl(180, 52%, 96%);
+  --color-site-2: hsl(180, 29%, 50%);
+
+  --font-league-spartan: "League Spartan", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-league-spartan);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+main {
+  background-color: var(--color-site-1);
+}
+
+.Header {
+  width: 100%;
+  height: 15rem;
+  background: url("./assets/bg-header-mobile.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--color-site-2);
+}

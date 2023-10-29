@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+
+:root {
+  --color-brand-1: hsl(180, 14%, 20%);
+  --color-brand-2: hsl(180, 8%, 52%);
+  --color-brand-3: hsl(180, 31%, 95%);
+
+  --color-site-1: hsl(180, 52%, 96%);
+  --color-site-2: hsl(180, 29%, 50%);
+  --color-site-3: hsl(180, 13%, 86%);
+
+  --font-league-spartan: "League Spartan", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-league-spartan);
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 500;
+}
+
+.JobContainer {
+  width: 100%;
+  padding: 4rem 2rem 2rem;
+  border-radius: 0.6rem;
+  background-color: var(--color-brand-3);
+  position: relative;
+  box-shadow: 5px 5px 15px var(--color-brand-2);
+}
+
+.JobContainer.featured {
+  border-left: 5px solid var(--color-site-2);
+}
+
+.JobContainer-ImgBox {
+  position: absolute;
+  top: -2.5rem;
+  left: 2rem;
+  width: 5rem;
+}
+
+.JobContainer-ImgBox > img {
+  width: 100%;
+}
+
+.JobContainer-FirstPart-Company {
+  display: inline-block;
+  font-size: 1.6rem;
+  color: var(--color-site-2);
+  font-weight: bold;
+  margin-right: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.JobContainer-FirstPart-New {
+  display: inline-block;
+  font-size: 1.6rem;
+  padding: 0.7rem 1.5rem;
+  background-color: var(--color-site-2);
+  margin-right: 1rem;
+  text-transform: uppercase;
+  color: var(--color-brand-3);
+  border-radius: 2rem;
+}
+
+.JobContainer-FirstPart-Featured {
+  font-size: 1.6rem;
+  background-color: var(--color-brand-1);
+  padding: 0.7rem 1.5rem;
+  color: var(--color-brand-3);
+  border-radius: 2rem;
+  text-transform: uppercase;
+}
+
+.JobContainer-FirstPart-Position {
+  font-size: 1.6rem;
+  color: var(--color-brand-1);
+  margin: 1.5rem 0;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.JobContainer-FirstPart-Position:hover {
+  color: var(--color-site-2);
+}
+
+.JobContainer-FirstPart-PostedAt,
+.JobContainer-FirstPart-Contract {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  margin-right: 2.5rem;
+  position: relative;
+}
+
+.JobContainer-FirstPart-Location {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  position: relative;
+}
+
+.JobContainer-FirstPart-Contract::before,
+.JobContainer-FirstPart-Location::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  transform: translateY(-50%);
+  left: -1rem;
+  display: block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--color-brand-2);
+  border-radius: 50%;
+}
+
+.JobContainer-KeywordsBox {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-top: 2px solid var(--color-brand-2);
+  padding-top: 2rem;
+  margin-top: 2rem;
+}
+
+.JobContainer-KeywordsBox > button {
+  background-color: var(--color-site-3);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  font-size: 1.6rem;
+  color: var(--color-site-2);
+  border-radius: 0.25rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+.JobContainer-KeywordsBox > button:hover {
+  background-color: var(--color-site-2);
+  color: var(--color-brand-3);
+}
+
+@media screen and (min-width: 768px) {
+  .JobContainer {
+    display: grid;
+    grid-template-columns: 10rem 1fr 1fr;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+
+  .JobContainer-ImgBox {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 10rem;
+  }
+
+  .JobContainer-KeywordsBox {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
