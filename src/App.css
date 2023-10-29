@@ -38,3 +38,13 @@ main {
   background-repeat: no-repeat;
   background-color: var(--color-site-2);
 }
+
+@media screen and (min-width: 768px) {
+  .Header {
+    background: url("./assets/bg-header-desktop.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--color-site-2);
+  }
+}
